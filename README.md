@@ -15,7 +15,7 @@ PCL(Portable Class Library)の中から、フロントエンド（Windows Store 
 PCL 内で、元の MainPage を模倣して作成したのちプロパティ等を使う。
 Click イベントの引数は RoutedEventArgs になるが、EventArgs にして仮実装。
 
-```
+```csharp
 public MainPage(object target)
 {
     _target = target;
