@@ -22,15 +22,21 @@ namespace D4Reflection
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        D4Reflection.Lib.MainPage page;
+        D4ReflectionCSharp.Lib.MainPage page;
         public MainPage()
         {
             this.InitializeComponent();
 
             // PLC内へバインド
-            this.page = new Lib.MainPage(this);
+            this.page = new D4ReflectionCSharp.Lib.MainPage(this);
         }
 
+        /// <summary>
+        /// 通常のコードビハイド
+        /// btn1, btn2 の Click イベントは D4ReflectionCSharp.Lib.MainPage 内で行う
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.text1.Text = "new message.";

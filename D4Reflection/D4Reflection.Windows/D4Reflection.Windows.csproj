@@ -108,6 +108,10 @@
       <Project>{15167f9e-fec4-4ab9-a6b3-1083279696bb}</Project>
       <Name>D4Reflection.Lib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\D4ReflectionCSharp.Lib\D4ReflectionCSharp.Lib.csproj">
+      <Project>{6f64d645-5ae7-4312-9721-2e8b80a5fb28}</Project>
+      <Name>D4ReflectionCSharp.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainPage.xaml.cs">

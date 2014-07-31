@@ -15,6 +15,8 @@ PCL(Portable Class Library)の中から、フロントエンド（Windows Store 
 PCL 内で、元の MainPage を模倣して作成したのちプロパティ等を使う。
 Click イベントの引数は RoutedEventArgs になるが、EventArgs にして仮実装。
 
+## C# sample code
+
 ```csharp
 public MainPage(object target)
 {
@@ -59,6 +61,35 @@ void btn2_Click(object sender, EventArgs e)
         new Uri("ms-appx:///images/Hidamari-200x160.png"));
 }
 ```
+
+## F# sample code
+
+```fsharp
+namespace D4ReflectionFSharp.Lib
+open System
+open System.Collections.Generic
+open System.Linq
+open System.Text
+open D4Reflection.Lib
+
+type MainPage(target:obj) =
+    inherit BindObject(target)
+
+    let mutable text1 = new TextBlock(base.FindName("text1"))
+    let mutable btn1  = new Button(base.FindName("btn1"))
+    let mutable btn2  = new Button(base.FindName("btn2"))
+    let mutable image1  = new Image(base.FindName("image1"))
+
+    do
+        btn1.Click.Add( fun(e) -> 
+            text1.Text <- "click event F#"
+        )
+        btn2.Click.Add( fun(e) -> 
+            image1.Source <- new BitmapImage(
+                new Uri("ms-appx:///images/HaruLock.png"))
+        )
+```
+
 
 本来 PCL 内では使えない Windows.UI.Xaml.Media.Imaging.BitmapImage なども利用できる。
 
