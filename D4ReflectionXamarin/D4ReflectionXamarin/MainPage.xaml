@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="D4ReflectionXamarin.MainPage"
+             Title="D4Reflection for Xamarin.Forms"
+             >
+  <StackLayout>
+    <Button x:Name="btn0" Text="Click Me!" Clicked="btn0_Clicked" />
+    <Label x:Name="text1" Text="message." Font="Large" />
+    <Button x:Name="btn1" Text="Reflection"  />
+    <Button x:Name="btn2" Text="Change Image"  />
+    <Image x:Name="image1" Source="" BackgroundColor="Gray" 
+    	HeightRequest="300" />
+  </StackLayout>
+</ContentPage>

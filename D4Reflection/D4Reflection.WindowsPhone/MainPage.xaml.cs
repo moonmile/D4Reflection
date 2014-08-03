@@ -27,6 +27,8 @@ namespace D4Reflection
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+            // PLC内へバインド
+            new D4ReflectionCSharp.Lib.MainPage(this);
         }
 
         /// <summary>
@@ -43,6 +45,11 @@ namespace D4Reflection
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed イベント。
             // 一部のテンプレートで指定された NavigationHelper を使用している場合は、
             // このイベントが自動的に処理されます。
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            text1.Text = "local click message.";
         }
     }
 }

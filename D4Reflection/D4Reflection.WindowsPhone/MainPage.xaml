@@ -8,7 +8,32 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize"  Value="30" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="30" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock FontSize="30"
+            HorizontalAlignment="Left" Margin="41,39,0,0" TextWrapping="Wrap" Text="D4Reflection Sample" VerticalAlignment="Top"/>
+        <Button 
+            Content="Clicke Me! Interface " HorizontalAlignment="Left" Margin="38,80,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBlock 
+            x:Name="text1"
+            HorizontalAlignment="Left" Margin="41,150,0,0" TextWrapping="Wrap" Text="text1 message." VerticalAlignment="Top" Width="349"/>
+        <Button 
+            x:Name="btn1"
+        	Content="Clicke Me! Event" HorizontalAlignment="Left" Margin="38,201,0,0" VerticalAlignment="Top" Width="304" />
+        <Button 
+        	x:Name="btn2"
+        	Content="Dynamic Bitmap" HorizontalAlignment="Left" Margin="41,269,0,0" VerticalAlignment="Top" Width="304" />
+        <Image 
+            x:Name="image1"
+            HorizontalAlignment="Left" Height="270" Margin="44,342,0,0" VerticalAlignment="Top" Width="298"/>
 
     </Grid>
 </Page>
