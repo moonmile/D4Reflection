@@ -10,6 +10,9 @@ PCL(Portable Class Library)の中から、フロントエンド（Windows Store 
 
 もともと、F# 用にリフレクションを使って実装したものを dynamic を使って C# に直してみた。
 
+Microsoft.VisualStudio.TestTools.UnitTesting 名前空間にある PrivateObject クラスを通常 PCL でも使えるようにした。
+http://msdn.microsoft.com/ja-jp/library/Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject.aspx
+
 # 使い方
 
 PCL 内で、元の MainPage を模倣して作成したのちプロパティ等を使う。
